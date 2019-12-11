@@ -1,42 +1,51 @@
 package apitest.models;
 
-public class Movie {
+public class Movie 
+{
 	private String Title;
 	private String Year;
 	private String imdbID;
 	private String Type;
 	private String Poster;
 	
-	public String getTitle() {
+	public String getTitle() 
+	{
 		return Title;
 	}
-	public void setTitle(String title) {
+	public void setTitle(String title) 
+	{
 		Title = title;
 	}
-	public String getYear() {
+	public String getYear() 
+	{
 		return Year;
 	}
-	public void setYear(String year) {
+	public void setYear(String year) 
+	{
 		Year = year;
 	}
-	public String getImdbID() {
+	public String getImdbID() 
+	{
 		return imdbID;
 	}
-	public void setImdbID(String imdbID) {
+	public void setImdbID(String imdbID) 
+	{
 		this.imdbID = imdbID;
 	}
-	public String getType() {
+	public String getType() 
+	{
 		return Type;
 	}
-	public void setType(String type) {
+	public void setType(String type) 
+	{
 		Type = type;
 	}
-	public String getPoster() {
+	public String getPoster() 
+	{
 		return Poster;
 	}
-	public void setPoster(String poster) {
+	public void setPoster(String poster) 
+	{
 		Poster = poster;
-	}
-	
-	
+	}	
 }

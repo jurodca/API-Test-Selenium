@@ -9,6 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions( plugin = "pretty", 
 				  features = "classpath:features",
 				  glue = {"stepdefinitions"})
-public class RunApiTest {
+public class RunApiTest 
+{
 
 }
