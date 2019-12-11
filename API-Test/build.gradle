@@ -1,0 +1,38 @@
+
+plugins {
+    id 'java-library'
+    id 'java'
+    id 'eclipse'
+}
+
+//versioning of dependencies
+wrapper.gradleVersion = '6.0.1'
+def cucumberVersion = '4.7.4'
+def junitVersion = '5.5.0'
+def okhttpVersion = '2.7.5'
+
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+   	testImplementation "io.cucumber:cucumber-java:${cucumberVersion}"
+    testImplementation "io.cucumber:cucumber-junit:${cucumberVersion}"
+    testImplementation "com.squareup.okhttp:okhttp:${okhttpVersion}"
+    implementation "com.squareup.okhttp:okhttp:${okhttpVersion}"
+    implementation "com.mashape.unirest:unirest-java:1.4.9"
+    implementation "org.apache.httpcomponents:httpclient:4.3.6"
+    implementation "org.apache.httpcomponents:httpasyncclient:4.0.2"
+    implementation "org.apache.httpcomponents:httpmime:4.3.6"
+    implementation "com.google.code.gson:gson:2.8.5"
+
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    testRuntimeOnly "org.junit.vintage:junit-vintage-engine:${junitVersion}"
+}
+
+test {
+	useJUnitPlatform()
+}
