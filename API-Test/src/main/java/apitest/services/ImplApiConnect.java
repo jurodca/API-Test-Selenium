@@ -22,12 +22,12 @@ public class ImplApiConnect implements IApiConnect
 		urlSite.append(APIConstants.URL).append(title);
 		try 
 		{
-			HttpResponse<JsonNode> response = Unirest.get(urlSite.toString())
-													 .header("x-rapidapi-host", APIConstants.HOST)
-													 .header("x-rapidapi-key", APIConstants.API_KEY)
-													 .asJson();			
-			String result = response.getBody().getObject().get("Response").toString();			
-			existsMovie = result.equals("True");			
+		    HttpResponse<JsonNode> response = Unirest.get(urlSite.toString())
+			    .header("x-rapidapi-host", APIConstants.HOST)
+				.header("x-rapidapi-key", APIConstants.API_KEY)
+				.asJson();			
+		    String result = response.getBody().getObject().get("Response").toString();			
+		    existsMovie = result.equals("True");			
 		} catch (Exception e) 
 		{
 			e.printStackTrace();
