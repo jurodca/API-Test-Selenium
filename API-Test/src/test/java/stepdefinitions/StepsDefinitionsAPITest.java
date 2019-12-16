@@ -12,7 +12,7 @@ import io.cucumber.java.en.When;
 public class StepsDefinitionsAPITest 
 {
 	private IApiConnect apiConnect;
-	private String expectedAswer;
+	private String expectedAnswer;
 	private boolean apiResponse;
 	
 	@Before
@@ -33,16 +33,16 @@ public class StepsDefinitionsAPITest
 		this.apiResponse = this.apiConnect.searchByTitle(movieTitle);
 		if (apiResponse) 
 		{
-			this.expectedAswer =  "OK";
+			this.expectedAnswer =  "OK";
 		} else 
 		{
-			this.expectedAswer  = "NOT";
+			this.expectedAnswer  = "NOT";
 		}
 	}
 	
 	@Then("^I expect the response with the expected answer (.*)$")
 	public void i_expect_answer(String actualAnswer) 
 	{
-		assertEquals(this.expectedAswer, actualAnswer);
+		assertEquals(this.expectedAnswer, actualAnswer);
 	}
 }
