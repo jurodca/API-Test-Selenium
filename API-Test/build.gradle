@@ -3,6 +3,7 @@ plugins {
     id 'java-library'
     id 'java'
     id 'eclipse'
+    id 'idea'
 }
 
 //versioning of dependencies
@@ -15,6 +16,7 @@ def httpVersion = '4.3.6'
 def httpSyncVersion = '4.0.2'
 def httpMimeVersion = '4.3.6'
 def gsonVersion = '2.8.5'
+def chromeDriverVersion = '3.141.59'
 
 
 repositories {
@@ -26,6 +28,10 @@ dependencies {
    	testImplementation "io.cucumber:cucumber-java:${cucumberVersion}"
     testImplementation "io.cucumber:cucumber-junit:${cucumberVersion}"
     testImplementation "com.squareup.okhttp:okhttp:${okhttpVersion}"
+    testImplementation "org.seleniumhq.selenium:selenium-chrome-driver:${chromeDriverVersion}"
+    testImplementation "org.seleniumhq.selenium:selenium-remote-driver:${chromeDriverVersion}"
+    testImplementation "org.seleniumhq.selenium:selenium-api:${chromeDriverVersion}"
+
     implementation "com.squareup.okhttp:okhttp:${okhttpVersion}"
     implementation "com.mashape.unirest:unirest-java:${unirestVersion}"
     implementation "org.apache.httpcomponents:httpclient:${httpVersion}"
