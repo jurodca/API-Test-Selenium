@@ -3,7 +3,7 @@ Feature: Login into GitHub Account
 
   Scenario: Login into GitHub account with correct credentials
     Given I navigate to GitHub website
-    And   I click on the Sing in link on homepage
+    And   I click on the Sign in link on homepage
     And   I enter a valid username
     And   I enter a valid password
     When  I click on the Sign in button
