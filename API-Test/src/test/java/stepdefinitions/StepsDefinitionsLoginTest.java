@@ -51,7 +51,7 @@ public class StepsDefinitionsLoginTest {
     public void i_enter_a_valid_password() throws InterruptedException
     {
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//*[@id='password']")).sendKeys("vallidPassword");
+        driver.findElement(By.xpath("//*[@id='password']")).sendKeys("validPassword");
     }
 
     @When("^I click on the Sign in button$")

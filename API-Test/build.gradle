@@ -1,9 +1,15 @@
+//Copyright lines
 
 plugins {
     id 'java-library'
     id 'java'
     id 'eclipse'
     id 'idea'
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
 }
 
 //versioning of dependencies
@@ -18,14 +24,8 @@ def httpMimeVersion = '4.3.6'
 def gsonVersion = '2.8.5'
 def chromeDriverVersion = '3.141.59'
 
-
-repositories {
-    jcenter()
-    mavenCentral()
-}
-
 dependencies {
-   	testImplementation "io.cucumber:cucumber-java:${cucumberVersion}"
+    testImplementation "io.cucumber:cucumber-java:${cucumberVersion}"
     testImplementation "io.cucumber:cucumber-junit:${cucumberVersion}"
     testImplementation "com.squareup.okhttp:okhttp:${okhttpVersion}"
 
