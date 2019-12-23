@@ -23,6 +23,12 @@ def httpSyncVersion = '4.0.2'
 def httpMimeVersion = '4.3.6'
 def gsonVersion = '2.8.5'
 def chromeDriverVersion = '3.141.59'
+def rpcVersion = '1.1'
+def axisVersion = '1.4'
+def discoveryVersion = '0.4'
+def activationVersion = '1.1.1'
+def javaxMailVersion = '1.4.7'
+def wsdlVersion = '1.6.2'
 
 dependencies {
     testImplementation "io.cucumber:cucumber-java:${cucumberVersion}"
@@ -39,6 +45,12 @@ dependencies {
     implementation "org.apache.httpcomponents:httpasyncclient:${httpSyncVersion}"
     implementation "org.apache.httpcomponents:httpmime:${httpMimeVersion}"
     implementation "com.google.code.gson:gson:${gsonVersion}"
+    implementation "javax.xml:jaxrpc-api:${rpcVersion}"
+    implementation "org.apache.axis:axis:${axisVersion}"
+    implementation "commons-discovery:commons-discovery:${discoveryVersion}"
+    implementation "javax.activation:activation:${activationVersion}"
+    implementation "javax.mail:mail:${javaxMailVersion}"
+    implementation "wsdl4j:wsdl4j:${wsdlVersion}"
 
     testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
