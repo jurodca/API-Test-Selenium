@@ -9,7 +9,7 @@ Feature: Test a SOAP Web Service using Cucumber
     Then I validate if the capital name <capital> is correct
 
     Examples:
-    | isoCode | capital     |
-    | CO      | Bogota      |
-    | MX      | Mexico City |
-    | AR      | Buenos Aires|
+      | isoCode | capital      |
+      | CO      | Bogota       |
+      | MX      | Mexico City  |
+      | AR      | Buenos Aires |

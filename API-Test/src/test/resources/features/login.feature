@@ -1,5 +1,5 @@
 Feature: Login into GitHub Account
-      Existing github user should be able to login into account using correct credentials
+  Existing github user should be able to login into account using correct credentials
 
   Scenario: Login into GitHub account with correct credentials
     Given I navigate to GitHub website
