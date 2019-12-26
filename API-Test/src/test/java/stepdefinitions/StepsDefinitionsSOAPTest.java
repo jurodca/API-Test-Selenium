@@ -1,3 +1,4 @@
+
 package stepdefinitions;
 
 import apitest.utilities.APIConstants;
@@ -15,12 +16,14 @@ import java.rmi.RemoteException;
 
 public class StepsDefinitionsSOAPTest
 {
+
     private CountryInfoServiceSoapBindingStub stub;
     private CountryInfoServiceLocator locator;
     private String capitalCity;
 
     @Before
-    public void setup(){
+    public void setup()
+    {
         this.locator = new CountryInfoServiceLocator();
         locator.setCountryInfoServiceSoapEndpointAddress(APIConstants.WS_SOAP_URL_ENDPOINT);
     }
@@ -28,10 +31,16 @@ public class StepsDefinitionsSOAPTest
     @Given("^I connect to the SOAP endpoint$")
     public void i_connect_to_the_SOAP_endpoint()
     {
-        if(stub == null){
-            try {
-                this.stub = (CountryInfoServiceSoapBindingStub) locator.getPort(CountryInfoServiceSoapType.class);
-            } catch (ServiceException e) {
+        if (stub == null)
+        {
+            try
+            {
+                this.stub =
+                    (CountryInfoServiceSoapBindingStub) locator
+                        .getPort(CountryInfoServiceSoapType.class);
+            }
+            catch (ServiceException e)
+            {
                 e.printStackTrace();
             }
         }
@@ -40,9 +49,12 @@ public class StepsDefinitionsSOAPTest
     @When("^I fill a ISO Country code with (.*)$")
     public void i_fill_a_ISO_Country_code_with(String isoCode)
     {
-        try {
+        try
+        {
             this.capitalCity = stub.capitalCity(isoCode);
-        } catch (RemoteException e) {
+        }
+        catch (RemoteException e)
+        {
             e.printStackTrace();
         }
     }
@@ -50,9 +62,7 @@ public class StepsDefinitionsSOAPTest
     @Then("^I validate if the capital name (.*) is correct$")
     public void i_validate_if_the_capital_name_is_correct(String expectedCapital)
     {
-        Assert.assertEquals(expectedCapital,this.capitalCity);
+        Assert.assertEquals(expectedCapital, this.capitalCity);
     }
-
-
 
 }

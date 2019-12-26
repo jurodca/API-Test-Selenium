@@ -7,100 +7,115 @@
 
 package apitest.ws;
 
-public class TCountryCodeAndNameGroupedByContinent  implements java.io.Serializable {
+public class TCountryCodeAndNameGroupedByContinent implements java.io.Serializable
+{
+
     private apitest.ws.TContinent continent;
 
     private apitest.ws.TCountryCodeAndName[] countryCodeAndNames;
 
-    public TCountryCodeAndNameGroupedByContinent() {
+    public TCountryCodeAndNameGroupedByContinent()
+    {
     }
 
     public TCountryCodeAndNameGroupedByContinent(
-           apitest.ws.TContinent continent,
-           apitest.ws.TCountryCodeAndName[] countryCodeAndNames) {
-           this.continent = continent;
-           this.countryCodeAndNames = countryCodeAndNames;
+        apitest.ws.TContinent continent,
+        apitest.ws.TCountryCodeAndName[] countryCodeAndNames)
+    {
+        this.continent = continent;
+        this.countryCodeAndNames = countryCodeAndNames;
     }
-
 
     /**
      * Gets the continent value for this TCountryCodeAndNameGroupedByContinent.
      * 
      * @return continent
      */
-    public apitest.ws.TContinent getContinent() {
+    public apitest.ws.TContinent getContinent()
+    {
         return continent;
     }
-
 
     /**
      * Sets the continent value for this TCountryCodeAndNameGroupedByContinent.
      * 
      * @param continent
      */
-    public void setContinent(apitest.ws.TContinent continent) {
+    public void setContinent(apitest.ws.TContinent continent)
+    {
         this.continent = continent;
     }
-
 
     /**
      * Gets the countryCodeAndNames value for this TCountryCodeAndNameGroupedByContinent.
      * 
      * @return countryCodeAndNames
      */
-    public apitest.ws.TCountryCodeAndName[] getCountryCodeAndNames() {
+    public apitest.ws.TCountryCodeAndName[] getCountryCodeAndNames()
+    {
         return countryCodeAndNames;
     }
-
 
     /**
      * Sets the countryCodeAndNames value for this TCountryCodeAndNameGroupedByContinent.
      * 
      * @param countryCodeAndNames
      */
-    public void setCountryCodeAndNames(apitest.ws.TCountryCodeAndName[] countryCodeAndNames) {
+    public void setCountryCodeAndNames(apitest.ws.TCountryCodeAndName[] countryCodeAndNames)
+    {
         this.countryCodeAndNames = countryCodeAndNames;
     }
 
     private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof TCountryCodeAndNameGroupedByContinent)) return false;
+
+    public synchronized boolean equals(java.lang.Object obj)
+    {
+        if (!(obj instanceof TCountryCodeAndNameGroupedByContinent))
+            return false;
         TCountryCodeAndNameGroupedByContinent other = (TCountryCodeAndNameGroupedByContinent) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
+        if (obj == null)
+            return false;
+        if (this == obj)
+            return true;
+        if (__equalsCalc != null)
+        {
             return (__equalsCalc == obj);
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true && 
-            ((this.continent==null && other.getContinent()==null) || 
-             (this.continent!=null &&
-              this.continent.equals(other.getContinent()))) &&
-            ((this.countryCodeAndNames==null && other.getCountryCodeAndNames()==null) || 
-             (this.countryCodeAndNames!=null &&
-              java.util.Arrays.equals(this.countryCodeAndNames, other.getCountryCodeAndNames())));
+        _equals =
+            true
+                && ((this.continent == null && other.getContinent() == null)
+                    || (this.continent != null && this.continent.equals(other.getContinent())))
+                && ((this.countryCodeAndNames == null && other.getCountryCodeAndNames() == null)
+                    || (this.countryCodeAndNames != null
+                        && java.util.Arrays
+                            .equals(this.countryCodeAndNames, other.getCountryCodeAndNames())));
         __equalsCalc = null;
         return _equals;
     }
 
     private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
+
+    public synchronized int hashCode()
+    {
+        if (__hashCodeCalc)
+        {
             return 0;
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        if (getContinent() != null) {
+        if (getContinent() != null)
+        {
             _hashCode += getContinent().hashCode();
         }
-        if (getCountryCodeAndNames() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getCountryCodeAndNames());
-                 i++) {
+        if (getCountryCodeAndNames() != null)
+        {
+            for (int i = 0; i < java.lang.reflect.Array.getLength(getCountryCodeAndNames()); i++)
+            {
                 java.lang.Object obj = java.lang.reflect.Array.get(getCountryCodeAndNames(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
+                if (obj != null && !obj.getClass().isArray())
+                {
                     _hashCode += obj.hashCode();
                 }
             }
@@ -113,27 +128,54 @@ public class TCountryCodeAndNameGroupedByContinent  implements java.io.Serializa
     private static org.apache.axis.description.TypeDesc typeDesc =
         new org.apache.axis.description.TypeDesc(TCountryCodeAndNameGroupedByContinent.class, true);
 
-    static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://www.oorsprong.org/websamples.countryinfo", "tCountryCodeAndNameGroupedByContinent"));
-        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
+    static
+    {
+        typeDesc
+            .setXmlType(
+                new javax.xml.namespace.QName(
+                    "http://www.oorsprong.org/websamples.countryinfo",
+                    "tCountryCodeAndNameGroupedByContinent"));
+        org.apache.axis.description.ElementDesc elemField =
+            new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("continent");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://www.oorsprong.org/websamples.countryinfo", "Continent"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.oorsprong.org/websamples.countryinfo", "tContinent"));
+        elemField
+            .setXmlName(
+                new javax.xml.namespace.QName(
+                    "http://www.oorsprong.org/websamples.countryinfo",
+                    "Continent"));
+        elemField
+            .setXmlType(
+                new javax.xml.namespace.QName(
+                    "http://www.oorsprong.org/websamples.countryinfo",
+                    "tContinent"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("countryCodeAndNames");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://www.oorsprong.org/websamples.countryinfo", "CountryCodeAndNames"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.oorsprong.org/websamples.countryinfo", "tCountryCodeAndName"));
+        elemField
+            .setXmlName(
+                new javax.xml.namespace.QName(
+                    "http://www.oorsprong.org/websamples.countryinfo",
+                    "CountryCodeAndNames"));
+        elemField
+            .setXmlType(
+                new javax.xml.namespace.QName(
+                    "http://www.oorsprong.org/websamples.countryinfo",
+                    "tCountryCodeAndName"));
         elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://www.oorsprong.org/websamples.countryinfo", "tCountryCodeAndName"));
+        elemField
+            .setItemQName(
+                new javax.xml.namespace.QName(
+                    "http://www.oorsprong.org/websamples.countryinfo",
+                    "tCountryCodeAndName"));
         typeDesc.addFieldDesc(elemField);
     }
 
     /**
      * Return type metadata object
      */
-    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+    public static org.apache.axis.description.TypeDesc getTypeDesc()
+    {
         return typeDesc;
     }
 
@@ -141,24 +183,22 @@ public class TCountryCodeAndNameGroupedByContinent  implements java.io.Serializa
      * Get Custom Serializer
      */
     public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
+        java.lang.String mechType,
+        java.lang.Class _javaType,
+        javax.xml.namespace.QName _xmlType)
+    {
+        return new org.apache.axis.encoding.ser.BeanSerializer(_javaType, _xmlType, typeDesc);
     }
 
     /**
      * Get Custom Deserializer
      */
     public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+        java.lang.String mechType,
+        java.lang.Class _javaType,
+        javax.xml.namespace.QName _xmlType)
+    {
+        return new org.apache.axis.encoding.ser.BeanDeserializer(_javaType, _xmlType, typeDesc);
     }
 
 }
